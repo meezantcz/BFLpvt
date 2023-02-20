@@ -1,0 +1,66 @@
+@import "../../Scss/Variables/colors.scss";
+
+.checkbox-dropdown {
+  position: relative;
+  user-select: none;
+}
+
+.checkbox-dropdown-btn {
+  margin-top: 3px;
+  height: 40px;
+  border-radius: 4px;
+  border-bottom-color: $greyColor;
+  border-left-color: $greyColor;
+  border-right-color: $greyColor;
+  border-top-color: $greyColor;
+}
+.checkbox-dropdown-name,
+.checkbox-required-dropdown-name {
+  // padding-bottom: 16.5px;
+  font-size: 14px;
+}
+
+.checkbox-required-dropdown-name::after {
+  content: "*";
+  color: red;
+}
+.checkbox-dropdown .checkbox-dropdown-btn {
+  padding: 6px;
+  background: #fff;
+  border: 1px solid $greyColor;
+  //   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+
+  color: rgb(174, 178, 182);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.checkbox-dropdown .checkbox-dropdown-content {
+  position: absolute;
+
+  padding: 6px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  color: #333;
+  width: 100%;
+  z-index: 9999;
+}
+
+.checkbox-dropdown .checkbox-dropdown-content .checkbox-dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.checkbox-dropdown
+  .checkbox-dropdown-content
+  .checkbox-dropdown-item-container:hover {
+  background: #f4f4f4;
+}
+
+.checkbox-dropdown-item-container {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+@import "../../Scss/Variables/colors.scss";
+
+.breadcrumb-container {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  .arrow-sign {
+    color: $darkGreyColor;
+  }
+}

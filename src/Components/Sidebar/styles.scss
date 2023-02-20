@@ -1,0 +1,62 @@
+@import "../../Scss/Variables/colors.scss";
+
+.menu-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: $navyColor;
+  color: $whiteColor;
+
+  .dashboard,
+  .offers-reward,
+  .user-management {
+    padding: 10px;
+    cursor: pointer;
+
+    .dashboard-icon,
+    .offers-icon,
+    .user-management-icon {
+      padding: 5px;
+    }
+  }
+
+  .offers-reward,
+  .user-management {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+  }
+
+  .offers-dropdown,
+  .user-management-dropdown {
+    margin-left: 10px;
+    // font-size: 12px;
+
+    ul {
+      list-style-type: none;
+    }
+    ol,
+    ul {
+      padding-left: 0;
+    }
+
+    .offer-item,
+    .user-item {
+      cursor: pointer;
+      padding: 2.5px;
+
+      .left-arrow {
+        padding: 3px;
+      }
+    }
+  }
+  .active-div {
+    background-color: $navbarColor;
+  }
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}

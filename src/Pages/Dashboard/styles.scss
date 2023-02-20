@@ -1,0 +1,16 @@
+@import "../../Scss/Variables/colors.scss";
+.dashboard-container {
+  .welcome-user-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+  }
+}
+
+.blurred {
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+}

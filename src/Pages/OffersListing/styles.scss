@@ -1,0 +1,74 @@
+@import "../../Scss/Variables/colors.scss";
+
+.search-offer-container {
+  background-color: $whiteColor;
+  border-radius: 10px;
+}
+
+.search-fields {
+  padding-left: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100vw;
+
+  .uid-input {
+    width: 258px;
+    height: 40px;
+    border: 1px solid #dddfe1;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
+
+.offer-data-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $whiteColor;
+  margin-top: 15px;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  .offer-title {
+    font-size: 18px;
+  }
+
+  .offer-description {
+    font-size: 12px;
+  }
+
+  .offer-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .action-btn {
+      margin: 10px;
+    }
+  }
+}
+
+.offer-table-container {
+  padding-left: 10px;
+  padding-right: 15px;
+  background-color: $whiteColor;
+}
+
+.pagination-section {
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  background-color: $whiteColor;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .pagination-details {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import "./Variables/colors.scss";
+@import "./typography.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Roboto" sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  overflow: hidden;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  .side-bar {
+    width: 18%;
+  }
+  .page-container {
+    overflow: auto;
+    width: 82%;
+    background-color: $greyColor;
+    padding: 16px;
+  }
+  .full-page-container {
+    width: 100%;
+  }
+}
+
+input.input-checkbox {
+  width: 15px;
+  height: 15px;
+}
+input[type="checkbox"] {
+  accent-color: $orangeColor;
+}
+
+hr {
+  margin: 0;
+}
+
+// color-styles
+
+.txt-white {
+  color: $whiteColor;
+}

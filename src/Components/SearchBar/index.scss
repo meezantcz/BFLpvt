@@ -1,0 +1,26 @@
+@import "../../Scss/Variables/colors.scss";
+.searchInputs {
+  display: flex;
+  height: 42px;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid $greyColor;
+}
+
+.search input {
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: white;
+  padding: 10px;
+  height: 40px;
+}
+
+.searchIcon {
+  padding: 8px;
+}
+
+input:focus {
+  outline: none;
+}

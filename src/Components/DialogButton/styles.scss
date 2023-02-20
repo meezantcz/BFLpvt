@@ -1,0 +1,13 @@
+@import "../../Scss/Variables/colors.scss";
+
+.dialog-btn {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  background-color: $orangeColor;
+
+  color: white;
+}

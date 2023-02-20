@@ -1,0 +1,37 @@
+@import "../../Scss/Variables/colors.scss";
+.bulk-upload-display {
+  position: absolute;
+  width: 970px;
+  background-color: $whiteColor;
+  border-radius: 10px;
+  height: 500px;
+
+  padding: 10px;
+
+  .upload-file-container {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    height: 200px;
+    width: 550px;
+    border-style: dashed;
+    border-color: $orangeColor;
+    background-color: rgb(255, 251, 248);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    .click-to-upload-text {
+      cursor: pointer;
+    }
+
+    .click-to-upload {
+      text-align: center;
+      color: $darkBlueColor;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../Scss/Variables/colors.scss";
+
+.color-btn {
+  padding: 10px;
+
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+
+  background-color: $orangeColor;
+
+  border: none;
+}

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "1",
+    "name": "Ase Yurygyn",
+    "totalUsers": "3183",
+    "permissionGiven": "Adminstration",
+    "date": "20/02/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "2",
+    "name": "Dorian Aylward",
+    "totalUsers": "1076",
+    "permissionGiven": "Content Access",
+    "date": "07/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "3",
+    "name": "Bartram Westmacott",
+    "totalUsers": "1854",
+    "permissionGiven": "Adminstration",
+    "date": "21/08/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "4",
+    "name": "Mag Waywell",
+    "totalUsers": "1531",
+    "permissionGiven": "Content Access",
+    "date": "21/01/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "5",
+    "name": "Wally Fernanando",
+    "totalUsers": "215",
+    "permissionGiven": "Content Access",
+    "date": "12/05/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "6",
+    "name": "Justen Hazeldene",
+    "totalUsers": "1947",
+    "permissionGiven": "Adminstration",
+    "date": "23/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "7",
+    "name": "Ethelred Slight",
+    "totalUsers": "6941",
+    "permissionGiven": "Content Access",
+    "date": "07/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "8",
+    "name": "Tucky Rodway",
+    "totalUsers": "3773",
+    "permissionGiven": "Content Access",
+    "date": "17/03/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "9",
+    "name": "Ferdinand Hardeman",
+    "totalUsers": "4227",
+    "permissionGiven": "Adminstration",
+    "date": "13/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "10",
+    "name": "Oralia Napton",
+    "totalUsers": "144",
+    "permissionGiven": "Content Access",
+    "date": "28/04/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "11",
+    "name": "Demetris Reith",
+    "totalUsers": "215",
+    "permissionGiven": "Adminstration",
+    "date": "26/12/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "12",
+    "name": "Gaylene Brend",
+    "totalUsers": "215",
+    "permissionGiven": "Adminstration",
+    "date": "14/08/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "13",
+    "name": "Warde Andrioli",
+    "totalUsers": "1027",
+    "permissionGiven": "Adminstration",
+    "date": "18/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "14",
+    "name": "Ralf Hamlin",
+    "totalUsers": "49",
+    "permissionGiven": "Content Access",
+    "date": "29/01/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "15",
+    "name": "Nat Fazackerley",
+    "totalUsers": "770",
+    "permissionGiven": "Adminstration",
+    "date": "02/10/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "16",
+    "name": "Guillema Batman",
+    "totalUsers": "12",
+    "permissionGiven": "Content Access",
+    "date": "24/01/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "17",
+    "name": "Gnni Kelsell",
+    "totalUsers": "140",
+    "permissionGiven": "Content Access",
+    "date": "09/10/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "18",
+    "name": "Amalie Mein",
+    "totalUsers": "39",
+    "permissionGiven": "Content Access",
+    "date": "30/08/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "19",
+    "name": "Gelya Lassetter",
+    "totalUsers": "622",
+    "permissionGiven": "Content Access",
+    "date": "20/03/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "20",
+    "name": "Hadlee Hearse",
+    "totalUsers": "32",
+    "permissionGiven": "Content Access",
+    "date": "26/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "21",
+    "name": "Ilise Calles",
+    "totalUsers": "24",
+    "permissionGiven": "Adminstration",
+    "date": "01/07/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "22",
+    "name": "Quinlan Ellwell",
+    "totalUsers": "88",
+    "permissionGiven": "Adminstration",
+    "date": "10/01/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "23",
+    "name": "Cassius Jeannard",
+    "totalUsers": "130",
+    "permissionGiven": "Content Access",
+    "date": "03/12/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "24",
+    "name": "Letty Priestman",
+    "totalUsers": "666",
+    "permissionGiven": "Adminstration",
+    "date": "14/07/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "25",
+    "name": "Lowell Rheaume",
+    "totalUsers": "5325",
+    "permissionGiven": "Content Access",
+    "date": "12/11/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "26",
+    "name": "Jerrome Fargher",
+    "totalUsers": "398",
+    "permissionGiven": "Adminstration",
+    "date": "17/10/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "27",
+    "name": "Manfred O'Fogerty",
+    "totalUsers": "285",
+    "permissionGiven": "Content Access",
+    "date": "17/01/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "28",
+    "name": "Denney Till",
+    "totalUsers": "1150",
+    "permissionGiven": "Adminstration",
+    "date": "22/09/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "29",
+    "name": "Lazar Lepope",
+    "totalUsers": "861",
+    "permissionGiven": "Adminstration",
+    "date": "18/08/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "30",
+    "name": "Vale Kobpal",
+    "totalUsers": "56",
+    "permissionGiven": "Adminstration",
+    "date": "04/10/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "31",
+    "name": "Donica Woolley",
+    "totalUsers": "3187",
+    "permissionGiven": "Content Access",
+    "date": "14/08/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "32",
+    "name": "Robbie Dishmon",
+    "totalUsers": "591",
+    "permissionGiven": "Adminstration",
+    "date": "21/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "33",
+    "name": "Babara Anmore",
+    "totalUsers": "75",
+    "permissionGiven": "Adminstration",
+    "date": "07/04/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "34",
+    "name": "Blair Ericsson",
+    "totalUsers": "2451",
+    "permissionGiven": "Content Access",
+    "date": "06/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "35",
+    "name": "Herrick Neve",
+    "totalUsers": "12",
+    "permissionGiven": "Adminstration",
+    "date": "17/09/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "36",
+    "name": "Amble Braithwaite",
+    "totalUsers": "1180",
+    "permissionGiven": "Content Access",
+    "date": "07/02/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "37",
+    "name": "Sayre Burel",
+    "totalUsers": "128",
+    "permissionGiven": "Adminstration",
+    "date": "25/12/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "38",
+    "name": "Ruthie Notley",
+    "totalUsers": "40",
+    "permissionGiven": "Adminstration",
+    "date": "29/03/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "39",
+    "name": "Mahmoud Pulfer",
+    "totalUsers": "2241",
+    "permissionGiven": "Adminstration",
+    "date": "01/03/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "40",
+    "name": "Linnell Shinn",
+    "totalUsers": "239",
+    "permissionGiven": "Adminstration",
+    "date": "15/06/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "41",
+    "name": "Farlie Kynaston",
+    "totalUsers": "2606",
+    "permissionGiven": "Adminstration",
+    "date": "10/05/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "42",
+    "name": "Angil Kuhnhardt",
+    "totalUsers": "213",
+    "permissionGiven": "Content Access",
+    "date": "18/01/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "43",
+    "name": "Milt Lubbock",
+    "totalUsers": "55",
+    "permissionGiven": "Adminstration",
+    "date": "02/10/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "44",
+    "name": "Westleigh Postlethwaite",
+    "totalUsers": "455",
+    "permissionGiven": "Content Access",
+    "date": "02/10/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "45",
+    "name": "Cyrille Samett",
+    "totalUsers": "3919",
+    "permissionGiven": "Adminstration",
+    "date": "11/07/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "46",
+    "name": "Tina Streatfeild",
+    "totalUsers": "69",
+    "permissionGiven": "Content Access",
+    "date": "05/02/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "47",
+    "name": "Truman Pavlik",
+    "totalUsers": "17",
+    "permissionGiven": "Adminstration",
+    "date": "21/10/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "48",
+    "name": "Libbey Tippetts",
+    "totalUsers": "85",
+    "permissionGiven": "Content Access",
+    "date": "19/03/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "49",
+    "name": "Miof mela Simonetti",
+    "totalUsers": "215",
+    "permissionGiven": "Content Access",
+    "date": "22/09/2022",
+    "actions": "edit,delete"
+  },
+  {
+    "id": "50",
+    "name": "Pascal O'Connolly",
+    "totalUsers": "2434",
+    "permissionGiven": "Adminstration",
+    "date": "15/02/2022",
+    "actions": "edit,delete"
+  }
+]

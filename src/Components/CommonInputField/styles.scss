@@ -1,0 +1,28 @@
+@import "../../Scss/Variables/colors.scss";
+
+.required-fields::after {
+  content: "*";
+  color: $requiredColor;
+}
+
+.required-fields,
+.not-required {
+  margin: 20px;
+
+  font-size: 14px;
+}
+
+.input-fields {
+  .common-input {
+    padding: 10px;
+    margin-left: 12px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid $greyColor;
+    cursor: pointer;
+  }
+}
+
+.extra_right_margin {
+  margin-right: 12px;
+}

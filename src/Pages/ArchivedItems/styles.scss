@@ -1,0 +1,21 @@
+@import "../../Scss/Variables/colors.scss";
+
+.archived-items-display {
+  position: absolute;
+  width: 1000px;
+  background-color: $whiteColor;
+  border-radius: 10px;
+
+  padding: 10px;
+}
+
+.archived-items-data-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  background-color: $whiteColor;
+
+  padding: 10px;
+  border-radius: 10px;
+}

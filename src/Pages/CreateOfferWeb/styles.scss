@@ -1,0 +1,37 @@
+@import "../..//Scss/Variables/colors.scss";
+
+.create-offer-display-web {
+  background-color: $whiteColor;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.create-web-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.create-offer-dropdown {
+  width: 275px;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  padding-top: 10px;
+  margin-right: 30px;
+}
+
+.expected-value,
+.expected-dropdown,
+.expected-date {
+  font: normal normal normal 12px/20px Poppins;
+  color: $validationColor;
+}
+
+.expected-value {
+  padding-left: 10px;
+}

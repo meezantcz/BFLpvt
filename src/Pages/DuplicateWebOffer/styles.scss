@@ -1,0 +1,157 @@
+@import "../../Scss/Variables/colors.scss";
+
+.create-duplicate-offer-display {
+  position: absolute;
+  background-color: $whiteColor;
+  border-radius: 10px;
+
+  padding: 10px;
+
+  .create-duplicate-offer-data-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    background-color: $whiteColor;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    .create-duplicate-offer-title {
+      color: var(--unnamed-color-092140);
+      text-align: left;
+      font: normal normal 600 18px/27px Poppins;
+      letter-spacing: 0px;
+      color: #092140;
+      opacity: 1;
+    }
+  }
+
+  .create-duplicate-fields-container {
+    margin: 10px;
+    height: 100px;
+    max-width: 960px;
+    border-radius: 5px;
+    border: 1.5px solid $greyColor;
+    display: flex;
+    align-items: center;
+    overflow-y: hidden;
+    .create-duplicate-fields-item-container {
+      overflow: auto;
+      width: 99%;
+      display: flex;
+      align-items: center;
+    }
+    .create-duplicate-delete-icon {
+      width: 2%;
+      height: 5%;
+      position: absolute;
+      // top: 120px;
+      right: 10px;
+      background: $requiredColor;
+      border: 1px solid $requiredColor;
+      opacity: 1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .create-duplicate-field {
+    height: 100%;
+
+    border-right: 1.5px solid $greyColor;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .defined-width {
+    width: calc(960px / 4);
+  }
+
+  .date-width {
+    width: 350px;
+  }
+
+  .create-duplicate-arrow-left {
+    position: absolute;
+    top: 100px;
+    left: 14px;
+    cursor: pointer;
+  }
+  .create-duplicate-arrow-right {
+    position: absolute;
+    top: 100px;
+    right: 14px;
+    cursor: pointer;
+  }
+
+  .create-duplicate-btn {
+    padding: 10px;
+    margin: 10px;
+    height: 50px;
+    width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #dd764015 0% 0% no-repeat padding-box;
+    border: 1px dashed #dd7640;
+    opacity: 1;
+    border-radius: 5px;
+    cursor: pointer;
+
+    .create-duplicate-btn-name {
+      color: var(--unnamed-color-0c2a50);
+      text-align: left;
+      font: normal normal medium 16px/12px Poppins;
+      letter-spacing: 0px;
+      color: #0c2a50;
+      opacity: 1;
+    }
+  }
+
+  .create-duplicate-offer-btns {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+
+.create-duplicate-fields-container::-webkit-scrollbar {
+  display: none;
+}
+
+.create-duplicate-fields-container {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.create-duplicate-label-value-container {
+  min-width: 255px;
+  padding: 10px;
+
+  .create-duplicate-label {
+    font: normal normal normal 14px/54px Poppins;
+    color: #464a53;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .create-duplicate-value {
+    font: normal normal medium 14px/10px Poppins;
+    letter-spacing: 0px;
+    color: #464a53;
+    cursor: pointer;
+  }
+}
+
+.create-duplicate-label.required-label::after {
+  content: "*";
+  color: $requiredColor;
+}

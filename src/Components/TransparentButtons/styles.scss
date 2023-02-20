@@ -1,0 +1,15 @@
+@import "../../Scss/Variables/colors.scss";
+
+.transparent-btn {
+  padding: 10px;
+
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid $orangeColor;
+  background-color: $whiteColor;
+
+  .btn-img {
+    padding: 5px;
+  }
+}

@@ -1,0 +1,60 @@
+@import "../../Scss/Variables/colors.scss";
+
+.onboard-user-container {
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  height: 380px;
+  width: 370px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px $greyColor;
+
+  .onboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    .onboard-heading {
+      color: var(--unnamed-color-092140);
+      text-align: left;
+      font: normal normal 600 20px/30px Poppins;
+      letter-spacing: 0px;
+      color: #092140;
+      opacity: 1;
+    }
+  }
+
+  .onboard-cross-icon {
+    cursor: pointer;
+  }
+
+  .onboard-inputs-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+
+    .set-onboard-eye {
+      position: absolute;
+      top: 44%;
+      right: 55%;
+      cursor: pointer;
+    }
+    .confirm-onboard-eye {
+      position: absolute;
+      top: 44%;
+      right: 7%;
+      cursor: pointer;
+    }
+  }
+  .onboard-input {
+    width: 180px;
+  }
+
+  .onboard-dropdown {
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../Scss/Variables/colors.scss";
+
+.add-permission-container {
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  height: 400px;
+  width: 450px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px $greyColor;
+
+  .add-permission-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    .add-permission-heading {
+      color: var(--unnamed-color-092140);
+      text-align: left;
+      font: normal normal 600 20px/30px Poppins;
+      letter-spacing: 0px;
+      color: #092140;
+      opacity: 1;
+    }
+  }
+
+  .add-permission-cross-icon {
+    cursor: pointer;
+  }
+
+  .add-permission-input-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .add-permission-dropdown {
+    width: 215px;
+  }
+
+  .add-permission-dropdown {
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+}
+
+.add-permission-input-add-group {
+  padding: 10px;
+  margin-left: 5px;
+}

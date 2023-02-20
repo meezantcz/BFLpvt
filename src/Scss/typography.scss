@@ -1,0 +1,63 @@
+@import "./Variables/colors.scss";
+
+.heading1 {
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 600;
+  color: $darkBlueColor;
+}
+
+.heading2 {
+  font-size: 20px;
+  line-height: 30px;
+  color: $darkBlueColor;
+}
+
+.heading3 {
+  font-size: 14px;
+  line-height: 21px;
+  color: $lightBlueColor;
+}
+
+.subtext {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.white-heading2 {
+  font-size: 12px;
+  line-height: 30px;
+  color: $whiteColor;
+}
+
+.grey-heading {
+  font-size: 14px;
+  line-height: 21px;
+  color: $darkGreyColor;
+}
+
+.input-label {
+  font-size: 13.5px;
+  line-height: 54px;
+  color: $labelColor;
+}
+
+.orange-btn-text {
+  font-size: 14px;
+  line-height: 21px;
+  color: $orangeColor;
+}
+
+.success-text {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: $darkBlueColor;
+}
+
+.description-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: $lightBlackColor;
+  font-family: Author;
+}

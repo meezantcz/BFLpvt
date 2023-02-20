@@ -1,0 +1,62 @@
+@import "../../Scss/Variables/colors.scss";
+
+.dropdown {
+  position: relative;
+  user-select: none;
+}
+
+.dropdown-btn {
+  height: 40px;
+  border-radius: 4px;
+  border-bottom-color: $greyColor;
+  border-left-color: $greyColor;
+  border-right-color: $greyColor;
+  border-top-color: $greyColor;
+}
+
+.required-dropdown-name::after {
+  content: "*";
+  color: $requiredColor;
+}
+.dropdown .dropdown-btn {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid $greyColor;
+  //   box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+
+  color: rgb(174, 178, 182);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+
+  padding: 6px;
+  background: #fff;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  color: #333;
+  width: 100%;
+  z-index: 99999;
+}
+
+.dropdown .dropdown-content .dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdown .dropdown-content .dropdown-item:hover {
+  background: #f4f4f4;
+}
+
+.dropdown-icon.up {
+  transform: rotate(180deg);
+}
+
+.extra_right_margin-dropdown {
+  margin-right: 12px;
+  margin-left: 10px;
+}

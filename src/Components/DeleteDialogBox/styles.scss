@@ -1,0 +1,39 @@
+@import "../../Scss/Variables/colors.scss";
+
+.delete-dialog-container {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  width: 311px;
+  height: 170px;
+  border-radius: 10px;
+  background-color: $whiteColor;
+  box-shadow: 2px 2px 2px 2px $greyColor;
+
+  .delete-content {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .delete-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: 50px;
+    color: $orangeColor;
+    cursor: pointer;
+  }
+  .vertical-line {
+    height: 100%;
+    width: 1px;
+    background-color: $greyColor;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

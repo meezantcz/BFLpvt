@@ -1,0 +1,24 @@
+@import "../../Scss/Variables/colors.scss";
+
+.create-multiple-offers-container {
+  position: fixed;
+  top: 150px;
+  left: 500px;
+  width: 311px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #ffff;
+  box-shadow: 2px 2px 2px 2px $greyColor;
+  padding-top: 30px;
+
+  .create-multiple-offers-yes-no-btn {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}

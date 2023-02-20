@@ -1,0 +1,34 @@
+@import "../../Scss/Variables/colors.scss";
+
+.add-group-dialog-container {
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  height: 400px;
+  width: 370px;
+  background-color: #ffff;
+  box-shadow: 2px 2px 2px 2px $greyColor;
+  border-radius: 5px;
+
+  .add-group-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    .add-group-dialog-cross-icon {
+      cursor: pointer;
+    }
+  }
+
+  .add-group-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .add-group-input-dialog-dropdown {
+    padding: 10px;
+    padding-left: 15px;
+  }
+}

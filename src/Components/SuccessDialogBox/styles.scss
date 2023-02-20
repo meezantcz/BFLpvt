@@ -1,0 +1,27 @@
+@import "../../Scss/Variables/colors.scss";
+
+.dialog-container {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  width: 420px;
+  height: 221px;
+  border-radius: 5px;
+  background-color: $whiteColor;
+  box-shadow: 2px 2px 2px 2px $greyColor;
+
+  .dialog-cross-icon {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  .dialog-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}

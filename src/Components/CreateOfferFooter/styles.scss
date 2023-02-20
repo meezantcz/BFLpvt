@@ -1,0 +1,18 @@
+@import "../../Scss/Variables/colors.scss";
+
+.create-offer-footer {
+  position: sticky;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-color: $whiteColor;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  z-index: 11111;
+
+  .create-footer-btn {
+    margin-right: 10px;
+  }
+}

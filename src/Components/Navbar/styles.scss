@@ -1,0 +1,36 @@
+@import "../../Scss/Variables/colors.scss";
+.my-navbar {
+  height: 50px;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  // position: fixed;
+  background-color: $navbarColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+
+  .logo,
+  .user {
+    padding: 40px;
+  }
+
+  .user {
+    display: flex;
+    gap: 5px;
+
+    .user-name {
+      padding: 5px 0px 5px 3px;
+      color: $whiteColor;
+    }
+
+    .arrow {
+      padding: 5px;
+      cursor: pointer;
+    }
+    .arrow.up {
+      transform: rotate(180deg);
+    }
+  }
+}
