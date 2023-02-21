@@ -30,11 +30,13 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      {showCreateOfferDialog && (
-        <CreateOfferDialog
-          setShowCreateOfferDialog={setShowCreateOfferDialog}
-        />
-      )}
+      <div className="create-offer-dialog-container">
+        {showCreateOfferDialog && (
+          <CreateOfferDialog
+            setShowCreateOfferDialog={setShowCreateOfferDialog}
+          />
+        )}
+      </div>
     </>
   );
 };

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { RxDashboard } from "react-icons/rx";
-import { TfiGift } from "react-icons/tfi";
 
-import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { FaUserPlus } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
+import UserManagementIcon from "../../Assets/Images/usermanagement.png";
+import RightArrow from "../../Assets/Images/arrowright.png";
 import "./styles.scss";
 import CreateOfferDialog from "../CreateOfferDialog";
 import DashboardIcon from "../../Assets/Images/dashboardicon.svg";
@@ -88,8 +87,8 @@ const Sidebar = () => {
               <ul className="offers-list">
                 <div className="active-menu-items">
                   <li className="offer-item" onClick={handleCreateOffer}>
-                    <span className="left-arrow">
-                      <HiArrowLongRight />
+                    <span className="right-arrow">
+                      <img src={RightArrow} alt="right-arrow" />
                     </span>{" "}
                     <span className="white-heading2">Create Offer</span>
                   </li>
@@ -97,8 +96,8 @@ const Sidebar = () => {
                 <div className="active-menu-items">
                   <li className="offer-item" onClick={handleOfferListing}>
                     {" "}
-                    <span className="left-arrow">
-                      <HiArrowLongRight />
+                    <span className="right-arrow">
+                      <img src={RightArrow} alt="right-arrow" />
                     </span>
                     <span className="white-heading2"> Offer lisiting</span>
                   </li>
@@ -106,8 +105,8 @@ const Sidebar = () => {
                 <div className="active-menu-items">
                   <li className="offer-item" onClick={handleBulkUpload}>
                     {" "}
-                    <span className="left-arrow">
-                      <HiArrowLongRight />
+                    <span className="right-arrow">
+                      <img src={RightArrow} alt="right-arrow" />
                     </span>
                     <span className="white-heading2"> Bulk Upload</span>
                   </li>
@@ -125,7 +124,7 @@ const Sidebar = () => {
             }
           >
             <span className="user-management-icon">
-              <FaUserPlus color="white" />
+              <img src={UserManagementIcon} alt="user-icon" />
             </span>
             <span className="white-heading1">User Management</span>
             <div className={`arrow ${showUserManagementDropdown ? "up" : ""}`}>
@@ -141,8 +140,8 @@ const Sidebar = () => {
               <ul className="users-dropdown-list">
                 <div className="active-menu-items">
                   <li className="user-item" onClick={handleAddUser}>
-                    <span className="left-arrow">
-                      <HiArrowLongRight />
+                    <span className="right-arrow">
+                      <img src={RightArrow} alt="right-arrow" />
                     </span>{" "}
                     <span className="white-heading2"> Add/Manage User</span>
                   </li>
@@ -150,8 +149,8 @@ const Sidebar = () => {
                 <div className="active-menu-items">
                   <li className="user-item" onClick={handleAddGroup}>
                     {" "}
-                    <span className="left-arrow">
-                      <HiArrowLongRight />
+                    <span className="right-arrow">
+                      <img src={RightArrow} alt="right-arrow" />
                     </span>
                     <span className="white-heading2"> Add/Manage Groups</span>
                   </li>
@@ -159,8 +158,8 @@ const Sidebar = () => {
                 <div className="active-menu-items">
                   <li className="user-item" onClick={handleAddPermission}>
                     {" "}
-                    <span className="left-arrow">
-                      <HiArrowLongRight />
+                    <span className="right-arrow">
+                      <img src={RightArrow} alt="right-arrow" />
                     </span>
                     <span className="white-heading2">
                       {" "}

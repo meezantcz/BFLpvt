@@ -205,7 +205,7 @@ const CreateOfferWeb = () => {
               maxlength={m.maxlength}
             />
 
-            {createButtonActive && m.isError && !m.value && (
+            {createButtonActive && m.isError && !m.value && m.isRequired && (
               <div className="expected-value">{m.label} is expected</div>
             )}
             {m.isValid && (

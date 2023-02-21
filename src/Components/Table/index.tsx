@@ -131,7 +131,7 @@ const Table: React.FC<Props> = ({
                             {buttonsArray.map((m: string, index: number) => (
                               <div>
                                 {index === 0 ? (
-                                  <div className="edit-btn-table">
+                                  <div className=" icon-circle edit-btn-table">
                                     <img
                                       src={EditIcon}
                                       alt="edit-icon"
@@ -140,7 +140,7 @@ const Table: React.FC<Props> = ({
                                   </div>
                                 ) : (
                                   <div
-                                    className="delete-btn-table"
+                                    className="icon-circle delete-btn-table"
                                     onClick={() => onDelete(row)}
                                   >
                                     <img
