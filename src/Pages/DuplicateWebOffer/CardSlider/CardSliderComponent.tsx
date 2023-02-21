@@ -4,7 +4,7 @@ import CommonDropdown from "../../../Components/CommonDropdown";
 import CommonInputField from "../../../Components/CommonInputField";
 import LeftArrow from "../../../Assets/Images/leftarrowduplicate.svg";
 import RightArrow from "../../../Assets/Images/rightarrowduplicate.svg";
-import DeleteIcon from "../../../Assets/Images/delete.svg";
+import DeleteIcon from "../../../Assets/Images/deletewhite.png";
 
 import "../styles.scss";
 

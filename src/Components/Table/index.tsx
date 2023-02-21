@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "./styles.scss";
 import { BsSortDownAlt } from "react-icons/bs";
-import { FiEdit2 } from "react-icons/fi";
-import { RiDeleteBin6Line } from "react-icons/ri";
+import SortIcon from "../../Assets/Images/sorting.png";
 import DeleteDialogBox from "../DeleteDialogBox";
 import EditIcon from "../../Assets/Images/editicon.svg";
 import DeleteIcon from "../../Assets/Images/delete.svg";
@@ -62,7 +61,7 @@ const Table: React.FC<Props> = ({
                       <>
                         <span className="heading-icon">
                           {" "}
-                          <BsSortDownAlt />
+                          <img src={SortIcon} alt="sort-icon" />
                         </span>
                       </>
                     ) : (

@@ -5,6 +5,7 @@ import OfferIcon from "../../Assets/Images/offertypeicon.svg";
 import RewardIcon from "../../Assets/Images/rewardtypeicon.svg";
 import WebIcon from "../../Assets/Images/computer.svg";
 import PhoneIcon from "../../Assets/Images/smartphone.svg";
+import BothIcon from "../../Assets/Images/webapp.png";
 import "./styles.scss";
 
 interface Props {
@@ -128,13 +129,7 @@ const CreateOfferDialog: React.FC<Props> = ({ setShowCreateOfferDialog }) => {
                 onClick={onAppClick}
               >
                 <span className="app-icon">
-                  <img
-                    src={PhoneIcon}
-                    alt="app-icon"
-                    width="14px"
-                    height="12px"
-                    style={{ margin: "5px" }}
-                  />
+                  <img src={PhoneIcon} alt="app-icon" />
                 </span>
 
                 <span className="app-offer-name">App</span>
@@ -149,7 +144,10 @@ const CreateOfferDialog: React.FC<Props> = ({ setShowCreateOfferDialog }) => {
                 className={`create-checkbox-style ${both ? "active" : ""}`}
                 onClick={onBothClick}
               >
-                <span className="offer-type-checkbox-name"> Both </span>
+                <span className="both-icon">
+                  <img src={BothIcon} alt="both-icon" />
+                </span>
+                <span className="both-offer-name"> Both </span>
                 <input
                   type="checkbox"
                   checked={both}

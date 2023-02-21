@@ -114,7 +114,8 @@
 }
 
 .web-icon,
-.app-icon {
+.app-icon,
+.both-icon {
   width: 27px;
   height: 27px;
   display: flex;
@@ -124,7 +125,8 @@
   border-radius: 50%;
 }
 .web-offer-name,
-.app-offer-name {
+.app-offer-name,
+.both-offer-name {
   text-align: left;
   font: normal normal medium 12px/54px Poppins;
   letter-spacing: 0px;
