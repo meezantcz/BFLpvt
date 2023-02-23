@@ -1,12 +1,14 @@
+@import "../../Scss/Variables/colors.scss";
+
 .updated_successfully {
   top: 50%;
   left: 50%;
   width: 100%;
   border: none;
   margin: 0 auto;
-  max-width: 562px;
-  max-height: 463px;
-  border-radius: 12px;
+  max-width: 382px;
+  max-height: 186px;
+  border-radius: 10px;
   box-shadow: none !important;
   padding-right: 0 !important;
   transform: translate(-50%, -50%);
@@ -18,63 +20,115 @@
     }
   }
   .card_header {
-    padding: 22px 34px;
-
-    h3 {
-      margin: 20px;
+    display: block;
+    margin-top: 10px;
+    border-bottom: none;
+    .card_heading {
       color: var(--unnamed-color-092140);
       text-align: center;
-      font: normal normal 600 18px/27px Poppins;
       letter-spacing: 0px;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 600;
+      font-family: Poppins;
       color: #092140;
       opacity: 1;
     }
   }
-  .card_body {
-    padding: 28px 34px 46px;
-    img {
-      margin-bottom: 38px;
-    }
-    h4 {
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 25px;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 20px;
-      font-weight: normal;
-      line-height: 25px;
-      letter-spacing: 0.19px;
-      margin-bottom: 76px;
-    }
-    .card_button {
-      width: 49%;
-      height: 48px;
-      max-width: 242px;
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 25px;
+  .offer-reward-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  
+    .create-offer-type,
+    .create-reward-type {
+      width: 154px;
+      height: 77px;
+      background: #ffffff;
+      border: 1px solid #e2e2e2;
       border-radius: 5px;
-      box-shadow: none;
-      &.close {
-        color: #3687e8;
-        margin-right: 14px;
-        border: 3px solid #3687e8;
-        &:hover {
-          color: #ffffff;
-          background: #3687e8;
-        }
-      }
-      &.track_view {
-        color: #ffffff;
-        background: #3687e8;
-        border: 3px solid #3687e8;
-      }
-      &:hover {
-        color: #3687e8;
-        background: #ffffff;
-      }
+      cursor: pointer;
+    }
+  
+    .create-offer-type.active,
+    .create-reward-type.active {
+      height: 77px;
+      width: 154px;
+      text-align: center;
+      background: #ed702e17;
+      border: 1px solid $orangeColor;
+      border-radius: 5px;
+    }
+  
+    .create-offer-type,
+    .create-reward-type {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .offer-reward-type-title {
+      text-align: center;
+      font: normal normal medium 14px/21px Poppins;
+      letter-spacing: 0px;
+      color: #0e1817;
+      text-transform: uppercase;
+      opacity: 1;
     }
   }
+
+}
+
+.modal_height {
+  max-height: 437px;
+}
+
+.web-icon,
+.app-icon,
+.both-icon {
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6eaf6;
+  border-radius: 50%;
+}
+.web-offer-name,
+.app-offer-name,
+.both-offer-name {
+  text-align: left;
+  font: normal normal medium 12px/54px Poppins;
+  letter-spacing: 0px;
+  color: #0e1817;
+  opacity: 1;
+  padding: 5px;
+}
+
+.rounded-checkbox {
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+  border: #e2e2e2 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  background: #e2e2e2 0% 0% no-repeat padding-box;
+  position: relative;
+}
+
+.rounded-checkbox.active {
+  appearance: none;
+  border-radius: 50%;
+  background: #ed702e 0% 0% no-repeat padding-box;
+  border: 1px solid #ed702e;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: relative;
 }

@@ -84,15 +84,16 @@ const CreateOfferModal: React.FC<Props> = ({
       show={show}
       size="lg"
       onHide={() => onContinue()}
-      className="updated_successfully"
+      //className="updated_successfully"
+      className= {showFormType ? 'updated_successfully modal_height' : 'updated_successfully'}
       backdropClassName="backdrop"
     >
       <Modal.Header className="card_header">
         <Modal.Title>
-          <h3>Select Type</h3>
+          <h3 className="card_heading ">Select Type</h3>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body className=" card-body container-fluid">
+      <Modal.Body>
         <div className="offer-reward-container">
           <div
             className={`create-offer-type ${offer ? "active" : ""}`}
@@ -118,6 +119,68 @@ const CreateOfferModal: React.FC<Props> = ({
             <span className="offer-reward-type-title">Reward</span>
           </div>
         </div>
+        {showFormType && (
+        <>
+          <div className="select-form-type-container">
+            <div className="select-form-text">Select Form Type</div>
+            <div className="select-offer-reward-types">
+              <div
+                className={`create-checkbox-style ${web ? "active" : ""}`}
+                onClick={onWebClick}
+              >
+                <span className="web-icon">
+                  <img src={WebIcon} alt="web-icon" />
+                </span>
+
+                <span className="web-offer-name">Web</span>
+
+                <input
+                  type="checkbox"
+                  checked={web}
+                  className={`rounded-checkbox ${web ? "active" : ""}`}
+                />
+              </div>
+              <div
+                className={`create-checkbox-style ${app ? "active" : ""}`}
+                onClick={onAppClick}
+              >
+                <span className="app-icon">
+                  <img src={PhoneIcon} alt="app-icon" />
+                </span>
+
+                <span className="app-offer-name">App</span>
+
+                <input
+                  type="checkbox"
+                  checked={app}
+                  className={`rounded-checkbox ${app ? "active" : ""}`}
+                />
+              </div>
+              <div
+                className={`create-checkbox-style ${both ? "active" : ""}`}
+                onClick={onBothClick}
+              >
+                <span className="both-icon">
+                  <img src={BothIcon} alt="both-icon" />
+                </span>
+                <span className="both-offer-name"> Both </span>
+                <input
+                  type="checkbox"
+                  checked={both}
+                  className={`rounded-checkbox ${both ? "active" : ""}`}
+                />
+              </div>
+
+              <DialogButton
+                buttonName="Continue"
+                onDialogButtonClick={onContinue}
+                width="319px"
+              />
+            </div>
+          </div>
+        </>
+      )}
+
       </Modal.Body>
     </Modal>
   );
