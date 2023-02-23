@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DELETE_OFFER } from "../../redux/slice/OffersSlice";
+import { deleteOffer, DELETE_OFFER } from "../../redux/slice/OffersSlice";
 import "./styles.scss";
 import ErrorIcon from "../../Assets/Images/erroricon.svg";
 
 import { FiAlertCircle } from "react-icons/fi";
-import { RootState } from "../../redux/store";
+import { AppDispatch, RootState } from "../../redux/store";
 
 interface Props {
   setShowDelete: React.Dispatch<React.SetStateAction<boolean>>;
@@ -13,21 +13,21 @@ interface Props {
 }
 
 const DeleteDialogBox: React.FC<Props> = ({ setShowDelete, deletedRow }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const archives = useSelector(
     (state: RootState) => state.offers.ArchivedItems
   );
+
+  console.log("deleteeeroww", deletedRow._id);
   const onNo = () => {
     setShowDelete(false);
   };
 
   const onYes = () => {
     if (deletedRow) {
-      dispatch(DELETE_OFFER(deletedRow.offerId));
       setShowDelete(false);
+      dispatch(deleteOffer(deletedRow._id));
     }
-    console.log("del", deletedRow.offerId);
-    console.log("arcj", archives);
   };
 
   return (

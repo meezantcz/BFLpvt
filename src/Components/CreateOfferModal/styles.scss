@@ -1,0 +1,80 @@
+.updated_successfully {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  border: none;
+  margin: 0 auto;
+  max-width: 562px;
+  max-height: 463px;
+  border-radius: 12px;
+  box-shadow: none !important;
+  padding-right: 0 !important;
+  transform: translate(-50%, -50%);
+  & > div {
+    margin: 0;
+    max-width: none;
+    & > div {
+      border: none;
+    }
+  }
+  .card_header {
+    padding: 22px 34px;
+
+    h3 {
+      margin: 20px;
+      color: var(--unnamed-color-092140);
+      text-align: center;
+      font: normal normal 600 18px/27px Poppins;
+      letter-spacing: 0px;
+      color: #092140;
+      opacity: 1;
+    }
+  }
+  .card_body {
+    padding: 28px 34px 46px;
+    img {
+      margin-bottom: 38px;
+    }
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 25px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 25px;
+      letter-spacing: 0.19px;
+      margin-bottom: 76px;
+    }
+    .card_button {
+      width: 49%;
+      height: 48px;
+      max-width: 242px;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 25px;
+      border-radius: 5px;
+      box-shadow: none;
+      &.close {
+        color: #3687e8;
+        margin-right: 14px;
+        border: 3px solid #3687e8;
+        &:hover {
+          color: #ffffff;
+          background: #3687e8;
+        }
+      }
+      &.track_view {
+        color: #ffffff;
+        background: #3687e8;
+        border: 3px solid #3687e8;
+      }
+      &:hover {
+        color: #3687e8;
+        background: #ffffff;
+      }
+    }
+  }
+}

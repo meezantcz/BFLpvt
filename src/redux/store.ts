@@ -4,6 +4,7 @@ import AllGroupReducer from "./slice/AllGroupSlice";
 import AllPermissionReducer from "./slice/AllPermissionSlice";
 import OffersReducer from "./slice/OffersSlice";
 import CreateOfferReducer from "./slice/CreateOfferSlice";
+import CreateRewardReducer from "./slice/CreateRewardSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     allpermission: AllPermissionReducer,
     offers: OffersReducer,
     createOfferWeb: CreateOfferReducer,
+    createRewardWeb: CreateRewardReducer,
   },
 });
 

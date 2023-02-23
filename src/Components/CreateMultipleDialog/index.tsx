@@ -6,7 +6,12 @@ import "./styles.scss";
 
 import { useLocation, useNavigate } from "react-router-dom";
 import CreateDuplicateIcon from "../../Assets/Images/duplicate.svg";
-
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
+import { createOfferApp } from "../../redux/slice/CreateOfferSlice";
+import { createOfferWeb } from "../../redux/slice/CreateOfferSlice";
+import { createRewardApp } from "../../redux/slice/CreateRewardSlice";
+import { createRewardWeb } from "../../redux/slice/CreateRewardSlice";
 interface Props {
   offerRewardData: any;
   setShowCreateMultipleOfferReward: React.Dispatch<
@@ -14,6 +19,7 @@ interface Props {
   >;
   setShowOfferRewardCreated: React.Dispatch<React.SetStateAction<boolean>>;
   reward?: boolean;
+  offerRewardType: string;
 }
 
 const CreateMultipleDialog: React.FC<Props> = ({
@@ -21,23 +27,83 @@ const CreateMultipleDialog: React.FC<Props> = ({
   setShowCreateMultipleOfferReward,
   setShowOfferRewardCreated,
   reward,
+  offerRewardType,
 }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
 
   const onNo = () => {
     if (offerRewardData) {
       setShowCreateMultipleOfferReward(false);
       setShowOfferRewardCreated(true);
-      localStorage.setItem(
-        `${pathname === "/createoffer/app" ? "app" : "web"}single offer`,
-        JSON.stringify(offerRewardData)
-      );
+
+      switch (offerRewardType) {
+        case "createOfferWeb":
+          const createOfferWebData: any = {};
+          const postCreateOfferWebData: any = [];
+          offerRewardData.map((m: any) => {
+            if (m.name && m.value) {
+              createOfferWebData[m.name] = m.value;
+            }
+          });
+          createOfferWebData.offerType = "Web";
+          postCreateOfferWebData.push(createOfferWebData);
+          console.log(postCreateOfferWebData, "apidataOffer");
+
+          dispatch(createOfferWeb(postCreateOfferWebData));
+          break;
+
+        case "createOfferApp":
+          const createOfferAppData: any = {};
+          const postCreateOfferAppData: any = [];
+          offerRewardData.map((m: any) => {
+            if (m.name && m.value) {
+              createOfferAppData[m.name] = m.value;
+            }
+          });
+          createOfferAppData.offerType = "App";
+          postCreateOfferAppData.push(createOfferAppData);
+          console.log(postCreateOfferAppData, "apidatarEWARDA");
+
+          dispatch(createOfferApp(postCreateOfferAppData));
+
+          break;
+        case "createRewardWeb":
+          const createRewardWebData: any = {};
+          const postCreateRewardWebData: any = [];
+          offerRewardData.map((m: any) => {
+            if (m.name && m.value) {
+              createRewardWebData[m.name] = m.value;
+            }
+          });
+          createRewardWebData.type = "Web";
+          postCreateRewardWebData.push(createRewardWebData);
+          console.log(postCreateRewardWebData, "apidataOffer");
+
+          dispatch(createRewardWeb(postCreateRewardWebData));
+          break;
+        case "createRewardApp":
+          const createRewardAppData: any = {};
+          const postCreateRewardAppData: any = [];
+          offerRewardData.map((m: any) => {
+            if (m.name && m.value) {
+              createRewardAppData[m.name] = m.value;
+            }
+          });
+          createRewardAppData.type = "App";
+          postCreateRewardAppData.push(createRewardAppData);
+          console.log(postCreateRewardAppData, "apidataOffer");
+
+          dispatch(createRewardApp(postCreateRewardAppData));
+          break;
+        default:
+          <></>;
+      }
     }
   };
   console.log("path app", pathname);
   const onYes = () => {
-    console.table(offerRewardData);
     setShowCreateMultipleOfferReward(false);
     switch (pathname) {
       case "/createoffer/app":
@@ -71,8 +137,9 @@ const CreateMultipleDialog: React.FC<Props> = ({
       default:
         <></>;
     }
+    console.log("onyesssmuu", offerRewardData);
   };
-  console.log("offerreward", offerRewardData);
+  console.log("offerreward kkkkk", offerRewardData);
 
   return (
     <>

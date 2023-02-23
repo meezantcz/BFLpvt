@@ -11,6 +11,9 @@ import CreateMultipleDialog from "../../Components/CreateMultipleDialog";
 import { useLocation, useNavigate } from "react-router-dom";
 import CommonDateField from "../../Components/CommonDateField";
 import { appRewardInputItems } from "../../data/AppRewardInputItems";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
+import { createRewardAppDraftData } from "../../redux/slice/CreateRewardSlice";
 const CreateRewardApp = () => {
   const [createRewardAppInputData, setCreateRewardAppInputData] = useState<any>(
     []
@@ -20,6 +23,7 @@ const CreateRewardApp = () => {
   const [showRewardCreated, setShowOfferCreated] = useState<boolean>(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     if (createRewardAppInputData.length === 0) {
@@ -53,6 +57,24 @@ const CreateRewardApp = () => {
     } else {
       setShowCreateMultipleRewards(true);
     }
+  };
+
+  const onSaveDraft = () => {
+    const postObjectData: any = {};
+    const obj: any = [];
+    createRewardAppInputData.map((m: any) => {
+      if (m.name && m.value) {
+        postObjectData[m.name] = m.value;
+      }
+    });
+    postObjectData.type = "App";
+
+    postObjectData.draftStatus = true;
+
+    obj.push(postObjectData);
+    console.log(obj, "apidraftdata");
+
+    dispatch(createRewardAppDraftData(obj));
   };
 
   const onSuccessDialogClose = () => {
@@ -117,6 +139,7 @@ const CreateRewardApp = () => {
         <></>;
     }
   };
+  console.log("rewardwebbb", createRewardAppInputData);
 
   useEffect(() => {
     if (showRewardCreated) {
@@ -150,7 +173,7 @@ const CreateRewardApp = () => {
         </div>
       </div>
       <CreateOfferFooter
-        onSaveDraft={onCreateOfferApp}
+        onSaveDraft={onSaveDraft}
         onCreate={onCreateOfferApp}
       />
       {showCreateMultipleRewards && (
@@ -158,6 +181,7 @@ const CreateRewardApp = () => {
           offerRewardData={createRewardAppInputData}
           setShowCreateMultipleOfferReward={setShowCreateMultipleRewards}
           setShowOfferRewardCreated={setShowOfferCreated}
+          offerRewardType="createRewardApp"
           reward={true}
         />
       )}

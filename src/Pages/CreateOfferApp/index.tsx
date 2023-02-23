@@ -9,6 +9,9 @@ import CreateMultipleDialog from "../../Components/CreateMultipleDialog";
 import CommonDateField from "../../Components/CommonDateField";
 import { useLocation, useNavigate } from "react-router-dom";
 import { appOfferInputItems } from "../../data/AppOfferInpuItems";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
+import { createOfferAppDraftData } from "../../redux/slice/CreateOfferSlice";
 
 const CreateOfferApp = () => {
   const [createOfferAppInputData, setCreateOfferAppInputData] = useState<any>(
@@ -19,6 +22,7 @@ const CreateOfferApp = () => {
     useState<boolean>(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
   const [showOfferCreated, setShowOfferCreated] = useState<boolean>(false);
 
@@ -43,6 +47,23 @@ const CreateOfferApp = () => {
 
     setCreateOfferAppInputData([...createOfferAppInputData]);
     return isValid;
+  };
+
+  const onSaveDraft = () => {
+    const postObjectData: any = {};
+    const obj: any = [];
+    createOfferAppInputData.map((m: any) => {
+      if (m.name && m.value) {
+        postObjectData[m.name] = m.value;
+      }
+    });
+    postObjectData.offerType = "App";
+    postObjectData.draftStatus = true;
+
+    obj.push(postObjectData);
+    console.log(obj, "apidraftdata");
+
+    dispatch(createOfferAppDraftData(obj));
   };
 
   const onCreateOfferApp = () => {
@@ -150,7 +171,7 @@ const CreateOfferApp = () => {
         </div>
       </div>
       <CreateOfferFooter
-        onSaveDraft={onCreateOfferApp}
+        onSaveDraft={onSaveDraft}
         onCreate={onCreateOfferApp}
       />
       {showCreateMultipleOffers && (
@@ -158,6 +179,7 @@ const CreateOfferApp = () => {
           offerRewardData={createOfferAppInputData}
           setShowCreateMultipleOfferReward={setShowCreateMultipleOffers}
           setShowOfferRewardCreated={setShowOfferCreated}
+          offerRewardType="createOfferApp"
         />
       )}
       {showOfferCreated && (

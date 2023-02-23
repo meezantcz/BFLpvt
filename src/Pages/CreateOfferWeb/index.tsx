@@ -11,6 +11,9 @@ import CreateMultipleDialog from "../../Components/CreateMultipleDialog";
 import { useLocation, useNavigate } from "react-router-dom";
 import CommonDateField from "../../Components/CommonDateField";
 import { webOfferInputItems } from "../../data/WebOfferInputItems";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
+import { createOfferWebDraftData } from "../../redux/slice/CreateOfferSlice";
 
 const CreateOfferWeb = () => {
   const [showCreateMultipleOffers, setShowCreateMultipleOffers] =
@@ -23,6 +26,7 @@ const CreateOfferWeb = () => {
   const [createButtonActive, setCreateButtonActive] = useState<boolean>(false);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     if (createOfferWebInputData.length === 0) {
@@ -66,6 +70,23 @@ const CreateOfferWeb = () => {
     } else {
       setShowCreateMultipleOffers(true);
     }
+  };
+
+  const onSaveDraft = () => {
+    const postObjectData: any = {};
+    const obj: any = [];
+    createOfferWebInputData.map((m: any) => {
+      if (m.name && m.value) {
+        postObjectData[m.name] = m.value;
+      }
+    });
+    postObjectData.offerType = "Web";
+    postObjectData.draftStatus = true;
+
+    obj.push(postObjectData);
+    console.log(obj, "apidraftdata");
+
+    dispatch(createOfferWebDraftData(obj));
   };
 
   const { pathname } = useLocation();
@@ -295,7 +316,7 @@ const CreateOfferWeb = () => {
       )}
       <CreateOfferFooter
         onCreate={onCreateOfferWeb}
-        onSaveDraft={onCreateOfferWeb}
+        onSaveDraft={onSaveDraft}
       />
 
       {showCreateMultipleOffers && (
@@ -303,6 +324,7 @@ const CreateOfferWeb = () => {
           offerRewardData={createOfferWebInputData}
           setShowCreateMultipleOfferReward={setShowCreateMultipleOffers}
           setShowOfferRewardCreated={setShowOfferCreated}
+          offerRewardType="createOfferWeb"
         />
       )}
     </>

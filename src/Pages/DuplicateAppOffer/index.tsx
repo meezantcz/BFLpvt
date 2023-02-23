@@ -21,7 +21,8 @@ const DuplicateAppOffer = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.table(location.state);
+    console.log(location.state);
+    console.log("inside useEffect app");
     if (
       Array.isArray(location.state.offerRewardData) &&
       location.state.offerRewardData.length > 0
@@ -42,9 +43,6 @@ const DuplicateAppOffer = () => {
     localStorage.setItem("multiple app offers submit", JSON.stringify(boxes));
 
     setShowSuccessDialogBox(true);
-    appOfferInputItems.forEach((item) => {
-      item.value = "";
-    });
 
     setTimeout(() => {
       setShowSuccessDialogBox(false);

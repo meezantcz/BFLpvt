@@ -11,6 +11,8 @@ import CardSliderComponent from "./CardSlider/CardSliderComponent";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import PlusIcon from "../../Assets/Images/createduplicateplus.svg";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
 
 const DuplicateWebOffer = () => {
   const [boxes, setBoxes] = useState<any>([
@@ -22,9 +24,12 @@ const DuplicateWebOffer = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    console.table(location.state);
+    console.log("dupp3", location.state);
+    console.log("dupp4", location.state.offerRewardData);
+    console.log("inside useEffect");
     if (
       Array.isArray(location.state.offerRewardData) &&
       location.state.offerRewardData.length > 0
@@ -39,30 +44,17 @@ const DuplicateWebOffer = () => {
 
   const onSaveDraft = () => {
     localStorage.setItem("multiple web offers draft", JSON.stringify(boxes));
-    webOfferInputItems.forEach((item) => {
-      item.value = "";
-    });
   };
 
   const onSubmit = () => {
     localStorage.setItem("multiple web offers submit", JSON.stringify(boxes));
 
     setShowSuccessDialogBox(true);
-    webOfferInputItems.forEach((item) => {
-      item.value = "";
-    });
 
     setTimeout(() => {
       setShowSuccessDialogBox(false);
 
       navigate("/offerlisting");
-      webOfferInputItems.forEach((item) => {
-        if (item.type === "dropdown") {
-          item.value = "Select";
-        } else {
-          item.value = "";
-        }
-      });
     }, 5000);
   };
   const handleLeftArrow = () => {};

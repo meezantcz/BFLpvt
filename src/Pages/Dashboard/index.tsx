@@ -3,6 +3,8 @@ import "./styles.scss";
 
 import ColorButton from "../../Components/ColorButton";
 import CreateOfferDialog from "../../Components/CreateOfferDialog";
+import CreateMultipleDialog from "../../Components/CreateMultipleDialog";
+import CreateOfferModal from "../../Components/CreateOfferModal";
 
 const Dashboard = () => {
   const [showCreateOfferDialog, setShowCreateOfferDialog] =
@@ -32,8 +34,12 @@ const Dashboard = () => {
       </div>
       <div className="create-offer-dialog-container">
         {showCreateOfferDialog && (
-          <CreateOfferDialog
+          // <CreateOfferDialog
+          //   setShowCreateOfferDialog={setShowCreateOfferDialog}
+          // />
+          <CreateOfferModal
             setShowCreateOfferDialog={setShowCreateOfferDialog}
+            show={true}
           />
         )}
       </div>

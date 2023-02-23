@@ -11,6 +11,9 @@ import CreateMultipleDialog from "../../Components/CreateMultipleDialog";
 import { useLocation, useNavigate } from "react-router-dom";
 import CommonDateField from "../../Components/CommonDateField";
 import { webRewardInputItems } from "../../data/WebRewardInputItems";
+import { useDispatch } from "react-redux";
+import { createRewardWebDraftData } from "../../redux/slice/CreateRewardSlice";
+import { AppDispatch } from "../../redux/store";
 const CreateRewardWeb = () => {
   const [showCreateMultipleRewards, setShowCreateMultipleRewards] =
     useState<boolean>(false);
@@ -18,7 +21,9 @@ const CreateRewardWeb = () => {
   const [createRewardWebInputData, setCreateRewardWebInputData] = useState<any>(
     []
   );
+  const [showRewardCreated, setShowRewardCreated] = useState<boolean>(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     if (createRewardWebInputData.length === 0) {
@@ -57,7 +62,24 @@ const CreateRewardWeb = () => {
     }
   };
 
-  const [showRewardCreated, setShowRewardCreated] = useState<boolean>(false);
+  const onSaveDraft = () => {
+    const postObjectData: any = {};
+    const obj: any = [];
+    createRewardWebInputData.map((m: any) => {
+      if (m.name && m.value) {
+        postObjectData[m.name] = m.value;
+      }
+    });
+    postObjectData.type = "Web";
+
+    postObjectData.draftStatus = true;
+
+    obj.push(postObjectData);
+    console.log(obj, "apidraftdata");
+
+    dispatch(createRewardWebDraftData(obj));
+  };
+
   const onSuccessDialogClose = () => {
     setShowRewardCreated(false);
   };
@@ -159,7 +181,7 @@ const CreateRewardWeb = () => {
       )}
       <CreateOfferFooter
         onCreate={onCreateRewardWeb}
-        onSaveDraft={onCreateRewardWeb}
+        onSaveDraft={onSaveDraft}
       />
 
       {showCreateMultipleRewards && (
@@ -167,6 +189,7 @@ const CreateRewardWeb = () => {
           offerRewardData={createRewardWebInputData}
           setShowCreateMultipleOfferReward={setShowCreateMultipleRewards}
           setShowOfferRewardCreated={setShowRewardCreated}
+          offerRewardType="createRewardWeb"
           reward={true}
         />
       )}
