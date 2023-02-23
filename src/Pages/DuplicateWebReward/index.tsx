@@ -10,6 +10,13 @@ import CardSliderComponent from "../DuplicateWebOffer/CardSlider/CardSliderCompo
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "./styles.scss";
+import {
+  createDuplicateWebReward,
+  createMultipleRewardWebDraftData,
+} from "../../redux/slice/CreateRewardSlice";
+
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
 const DuplicateWebReward = () => {
   const [boxes, setBoxes] = useState<any>([
     { itemIndex: 0, items: [...webRewardInputItems] },
@@ -19,6 +26,7 @@ const DuplicateWebReward = () => {
     useState<boolean>(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
     console.table(location.state);
     if (
@@ -33,14 +41,34 @@ const DuplicateWebReward = () => {
     console.log(`Toggled to: ${isOn}`);
   };
   const onSaveDraft = () => {
-    localStorage.setItem("multiple web rewards draft", JSON.stringify(boxes));
-    webRewardInputItems.forEach((item) => {
-      item.value = "";
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.type = "App";
+          boxData.draftStatus = true;
+        }
+      });
+
+      return boxData;
     });
+    dispatch(createMultipleRewardWebDraftData(apiData));
   };
 
   const onSubmit = () => {
-    localStorage.setItem("multiple web rewards submit", JSON.stringify(boxes));
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.type = "Web";
+        }
+      });
+
+      return boxData;
+    });
+    dispatch(createDuplicateWebReward(apiData));
 
     setShowSuccessDialogBox(true);
     webRewardInputItems.forEach((item) => {

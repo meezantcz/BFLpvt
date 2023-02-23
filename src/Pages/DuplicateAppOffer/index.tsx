@@ -9,6 +9,10 @@ import SuccessDialogbox from "../../Components/SuccessDialogBox";
 import { appOfferInputItems } from "../../data/AppOfferInpuItems";
 import CardSliderComponent from "../DuplicateWebOffer/CardSlider/CardSliderComponent";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
+import { createDuplicateAppOffer } from "../../redux/slice/CreateOfferSlice";
+import { createMultipleOfferAppDraftData } from "../../redux/slice/CreateOfferSlice";
 
 const DuplicateAppOffer = () => {
   const [boxes, setBoxes] = useState<any>([
@@ -19,6 +23,7 @@ const DuplicateAppOffer = () => {
     useState<boolean>(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     console.log(location.state);
@@ -36,11 +41,35 @@ const DuplicateAppOffer = () => {
   };
 
   const onSaveDraft = () => {
-    localStorage.setItem("multiple app offers draft", JSON.stringify(boxes));
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.offerType = "App";
+          boxData.draftStatus = true;
+        }
+      });
+
+      return boxData;
+    });
+    dispatch(createMultipleOfferAppDraftData(apiData));
   };
 
   const onSubmit = () => {
-    localStorage.setItem("multiple app offers submit", JSON.stringify(boxes));
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.offerType = "App";
+        }
+      });
+
+      return boxData;
+    });
+
+    dispatch(createDuplicateAppOffer(apiData));
 
     setShowSuccessDialogBox(true);
 

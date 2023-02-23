@@ -77,7 +77,7 @@ export const createDuplicateWebOffer = createAsyncThunk(
 );
 
 export const createDuplicateAppOffer = createAsyncThunk(
-  "createOfferAppSlice",
+  "createOfferWebSlice",
   (data: any) => {
     const apiData = {
       url: "offer/create-app-offer",
@@ -89,6 +89,37 @@ export const createDuplicateAppOffer = createAsyncThunk(
       .catch((err) => {});
   }
 );
+
+export const createMultipleOfferWebDraftData = createAsyncThunk(
+  "createOfferWebSlice",
+  (data: any) => {
+    const apiData = {
+      url: "/offer/create-offer-in-draft",
+      method: "POST",
+      data: data,
+    };
+    console.log("raft dta", data);
+    return onApiCall(apiData)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+);
+
+export const createMultipleOfferAppDraftData = createAsyncThunk(
+  "createOfferAppSlice",
+  (data: any) => {
+    const apiData = {
+      url: "/offer/create-offer-in-draft",
+      method: "POST",
+      data: data,
+    };
+    console.log("raft dta", data);
+    return onApiCall(apiData)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+);
+
 const createOfferWebSlice = createSlice({
   name: "createOfferWeb",
   initialState: {

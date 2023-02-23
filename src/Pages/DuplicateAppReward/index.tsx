@@ -8,6 +8,10 @@ import SuccessDialogbox from "../../Components/SuccessDialogBox";
 import { appRewardInputItems } from "../../data/AppRewardInputItems";
 import CardSliderComponent from "../DuplicateWebOffer/CardSlider/CardSliderComponent";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../redux/store";
+import { createDuplicateAppReward } from "../../redux/slice/CreateRewardSlice";
+import { createMultipleRewardAppDraftData } from "../../redux/slice/CreateRewardSlice";
 
 const DuplicateAppReward = () => {
   const [boxes, setBoxes] = useState<any>([
@@ -17,6 +21,7 @@ const DuplicateAppReward = () => {
     useState<boolean>(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
     console.table(location.state);
     if (
@@ -32,14 +37,34 @@ const DuplicateAppReward = () => {
   };
 
   const onSaveDraft = () => {
-    localStorage.setItem("multiple app rewards draft", JSON.stringify(boxes));
-    appRewardInputItems.forEach((item) => {
-      item.value = "";
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.type = "App";
+          boxData.draftStatus = true;
+        }
+      });
+
+      return boxData;
     });
+    dispatch(createMultipleRewardAppDraftData(apiData));
   };
 
   const onSubmit = () => {
-    localStorage.setItem("multiple web rewards submit", JSON.stringify(boxes));
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.type = "App";
+        }
+      });
+
+      return boxData;
+    });
+    dispatch(createDuplicateAppReward(apiData));
 
     setShowSuccessDialogBox(true);
     appRewardInputItems.forEach((item) => {

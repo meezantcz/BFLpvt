@@ -37,7 +37,6 @@ const CreateMultipleDialog: React.FC<Props> = ({
     if (offerRewardData) {
       setShowCreateMultipleOfferReward(false);
       setShowOfferRewardCreated(true);
-
       switch (offerRewardType) {
         case "createOfferWeb":
           const createOfferWebData: any = {};

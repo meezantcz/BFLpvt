@@ -62,6 +62,64 @@ export const createRewardAppDraftData = createAsyncThunk(
   }
 );
 
+export const createDuplicateWebReward = createAsyncThunk(
+  "createRewardWebSlice",
+  (data: any) => {
+    const apiData = {
+      url: "/reward/create-web-reward",
+      method: "POST",
+      data: data,
+    };
+    return onApiCall(apiData)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+);
+
+export const createDuplicateAppReward = createAsyncThunk(
+  "createRewardWebSlice",
+  (data: any) => {
+    const apiData = {
+      url: "/reward/create-app-reward",
+      method: "POST",
+      data: data,
+    };
+    return onApiCall(apiData)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+);
+
+export const createMultipleRewardWebDraftData = createAsyncThunk(
+  "createRewardWebSlice",
+  (data: any) => {
+    const apiData = {
+      url: "reward/create-reward-in-draft",
+      method: "POST",
+      data: data,
+    };
+    console.log("raft dta", data);
+    return onApiCall(apiData)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+);
+
+export const createMultipleRewardAppDraftData = createAsyncThunk(
+  "createRewardAppSlice",
+  (data: any) => {
+    const apiData = {
+      url: "/reward/create-reward-in-draft",
+      method: "POST",
+      data: data,
+    };
+    console.log("raft dta", data);
+    return onApiCall(apiData)
+      .then((res) => {})
+      .catch((err) => {});
+  }
+);
+
 const createRewardWebSlice = createSlice({
   name: "createRewardWeb",
   initialState: {

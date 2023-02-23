@@ -13,6 +13,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import PlusIcon from "../../Assets/Images/createduplicateplus.svg";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../redux/store";
+import {
+  createDuplicateWebOffer,
+  createMultipleOfferWebDraftData,
+} from "../../redux/slice/CreateOfferSlice";
 
 const DuplicateWebOffer = () => {
   const [boxes, setBoxes] = useState<any>([
@@ -43,11 +47,34 @@ const DuplicateWebOffer = () => {
   };
 
   const onSaveDraft = () => {
-    localStorage.setItem("multiple web offers draft", JSON.stringify(boxes));
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.offerType = "Web";
+          boxData.draftStatus = true;
+        }
+      });
+
+      return boxData;
+    });
+    dispatch(createMultipleOfferWebDraftData(apiData));
   };
 
   const onSubmit = () => {
-    localStorage.setItem("multiple web offers submit", JSON.stringify(boxes));
+    const apiData: any = boxes.map((box: any) => {
+      const boxData: any = {};
+      box.items.forEach((item: any) => {
+        if (item.value) {
+          boxData[item.name] = item.value;
+          boxData.offerType = "Web";
+        }
+      });
+
+      return boxData;
+    });
+    dispatch(createDuplicateWebOffer(apiData));
 
     setShowSuccessDialogBox(true);
 
