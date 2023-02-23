@@ -24,9 +24,7 @@
     margin-top: 10px;
     border-bottom: none;
     .card_heading {
-      color: var(--unnamed-color-092140);
       text-align: center;
-      letter-spacing: 0px;
       font-size: 18px;
       line-height: 27px;
       font-weight: 600;
@@ -40,7 +38,7 @@
     align-items: center;
     justify-content: space-evenly;
     margin-top: -20px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   
     .create-offer-type,
     .create-reward-type {
@@ -72,63 +70,86 @@
   
     .offer-reward-type-title {
       text-align: center;
-      font: normal normal medium 14px/21px Poppins;
-      letter-spacing: 0px;
+      font-weight: 500;
+      font-size: 14px;
+      font-family: Poppins;
+      line-height: 21px;
       color: #0e1817;
       text-transform: uppercase;
       opacity: 1;
     }
   }
+  .select-form-type-container {
+    margin: 20px 17px;
 
+    .select-form-text {
+      text-align: left;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 600;
+      color: #092140;
+      font-family: Poppins;
+    }
+
+    .select-offer-reward-types {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .create-checkbox-style {
+      padding: 10px;
+      margin: 5px;
+      width: 318px;
+      height: 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid #e2e2e2;
+      border-radius: 5px;
+    }
+    .create-checkbox-style.active {
+      background: #fef2ec;
+    }
+    .create-checkbox-style span:nth-child(2) {
+      flex: 1;
+    }
+  }
 }
 
-.modal_height {
-  max-height: 437px;
-}
-
-.web-icon,
-.app-icon,
-.both-icon {
-  width: 27px;
-  height: 27px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e6eaf6;
-  border-radius: 50%;
-}
-.web-offer-name,
-.app-offer-name,
-.both-offer-name {
-  text-align: left;
-  font: normal normal medium 12px/54px Poppins;
-  letter-spacing: 0px;
+.offer-name {
   color: #0e1817;
-  opacity: 1;
+  font-size: 12px;
+  line-height: 54px;
+  font-weight: 500;
+  font-family: Poppins;
   padding: 5px;
 }
 
 .rounded-checkbox {
   appearance: none;
   border-radius: 50%;
-  border: 1px solid #e2e2e2;
-  border: #e2e2e2 0% 0% no-repeat padding-box;
-  opacity: 1;
-  width: 15px;
-  height: 15px;
+  border: 1px solid #707070;
+  width: 13px;
+  height: 13px;
   margin-right: 10px;
-  background: #e2e2e2 0% 0% no-repeat padding-box;
+  background: #e2e2e2;
   position: relative;
 }
 
 .rounded-checkbox.active {
   appearance: none;
   border-radius: 50%;
-  background: #ed702e 0% 0% no-repeat padding-box;
+  background: #ed702e;
   border: 1px solid #ed702e;
-  opacity: 1;
   width: 15px;
   height: 15px;
   margin-right: 10px;
   position: relative;
+}
+
+.modal_height {
+  max-height: 437px;
 }

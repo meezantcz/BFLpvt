@@ -132,7 +132,7 @@ const CreateOfferModal: React.FC<Props> = ({
                   <img src={WebIcon} alt="web-icon" />
                 </span>
 
-                <span className="web-offer-name">Web</span>
+                <span className="offer-name">Web</span>
 
                 <input
                   type="checkbox"
@@ -148,7 +148,7 @@ const CreateOfferModal: React.FC<Props> = ({
                   <img src={PhoneIcon} alt="app-icon" />
                 </span>
 
-                <span className="app-offer-name">App</span>
+                <span className="offer-name">App</span>
 
                 <input
                   type="checkbox"
@@ -163,7 +163,7 @@ const CreateOfferModal: React.FC<Props> = ({
                 <span className="both-icon">
                   <img src={BothIcon} alt="both-icon" />
                 </span>
-                <span className="both-offer-name"> Both </span>
+                <span className="offer-name"> Both </span>
                 <input
                   type="checkbox"
                   checked={both}
